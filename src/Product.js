@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./Product.css";
+import React from 'react';
+import './Product.css';
 
-function Product({ id, title, image, price, rating }) {
+function Product({id, title, image, price, rating}) {
   return (
     <div className="product">
       <div className="product__info">
