@@ -1,7 +1,12 @@
 import axios from "axios";
 
+let development = process.env.NODE_ENV !== "production";
+
+// baseURL (dev/prod)
 const instance = axios.create({
-  baseURL: "http://localhost:5001/challenge-bf363/us-central1/api", // THE API (cloud function) URL
+  baseURL: development
+    ? "http://localhost:5000/"
+    : "https://mighty-wave-93588.herokuapp.com/", // api url
 });
 
 export default instance;
