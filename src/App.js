@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
-import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import {auth} from "./firebase";
 import Payment from "./Payment";
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
 import Orders from "./Orders";
 
 const promise = loadStripe("pk_test_b1OShXSE6QMFdU5g1d86NcXM");

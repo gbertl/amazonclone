@@ -1,16 +1,16 @@
-import { useStateValue } from "./StateProvider";
-import React, { useState, useEffect } from "react";
+import {useStateValue} from "./StateProvider";
+import React, {useState, useEffect} from "react";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import {CardElement, useElements, useStripe} from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { getBasketTotal } from "./reducer";
-import { Link, useHistory } from "react-router-dom";
+import {getBasketTotal} from "./reducer";
+import {Link, useHistory} from "react-router-dom";
 import axios from "./axios";
-import { db } from "./firebase";
+import {db} from "./firebase";
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{basket, user}, dispatch] = useStateValue();
   const history = useHistory();
 
   const stripe = useStripe();
@@ -48,7 +48,7 @@ function Payment() {
           card: elements.getElement(CardElement),
         },
       })
-      .then(({ paymentIntent }) => {
+      .then(({paymentIntent}) => {
         // paymentIntent = payment confirmation
 
         db.collection("users")
