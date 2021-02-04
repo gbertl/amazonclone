@@ -38,8 +38,6 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-  console.log("the seceret is >>>", clientSecret);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
