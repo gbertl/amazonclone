@@ -71,7 +71,11 @@ function Payment() {
           type: "EMPTY_BASKET",
         });
 
-        history.replace("/orders");
+        if (user) {
+          history.replace("/orders");
+        } else {
+          history.replace("/");
+        }
       });
   };
 
