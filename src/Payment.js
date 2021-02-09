@@ -130,8 +130,18 @@ function Payment() {
                   thousandSepartor={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                <button
+                  disabled={
+                    clientSecret === true || processing || disabled || succeeded
+                  }
+                >
+                  <span>
+                    {(() => {
+                      if (clientSecret === true) return "Please wait";
+                      if (processing) return "Processing";
+                      return "Buy Now";
+                    })()}
+                  </span>
                 </button>
 
                 {error && <div>{error}</div>}
