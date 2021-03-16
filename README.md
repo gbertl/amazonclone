@@ -2,7 +2,7 @@
 ![Title-image](https://i.imgur.com/0GpxE7V.png)
 
 ## Live Demo
-https://challenge-bf363.web.app
+https://clone-1e474.web.app/
 
 ## Features
 
@@ -18,5 +18,4 @@ https://youtu.be/RDV3Z1KCBvo
 
 ## Changes I've made
 
-1. Deployed Firebase Cloud Functions to Heroku, and moved it to this repository https://github.com/gilbertlc/amazoncloneapi.
-2. Use Redux for state management, previously was Context API.
+* Use Redux for state management, previously was Context API.
